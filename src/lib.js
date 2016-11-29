@@ -1,6 +1,7 @@
+// Create number between 0-255 for rgb values
 export function createColor() {
-  const setNumber =  function() {
-    return Math.round(Math.random() * (255 - 0));
+  const setNumber = function() {
+    return Math.floor(Math.random() * (255 - 0));
   }
 
   return {
@@ -10,6 +11,7 @@ export function createColor() {
   }
 }
 
+// Convert rgb values to hexidecimals
 function rgbToHex(r, g, b) {
 
   function componentToHex(c) {
@@ -24,15 +26,15 @@ export const colors = [];
 
 for (let i = 0; i < 5; i++) {
 
-  const setColor = {
+  const setValues = {
     r: createColor().r,
     g: createColor().g,
     b: createColor().b,
   }
 
    const color = {
-     rgb: setColor.r + ',' + setColor.g + ',' + setColor.b,
-     hex: '#' + rgbToHex(setColor.r, setColor.g, setColor.b)
+     rgb: setValues.r + ',' + setValues.g + ',' + setValues.b,
+     hex: '#' + rgbToHex(setValues.r, setValues.g, setValues.b)
    }
 
    colors.push(color);
