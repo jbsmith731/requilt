@@ -1,0 +1,12 @@
+.swatch-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100vh;
+}
+
+.swatch-container .swatch {
+  width: 20%;
+  height: inherit;
+  text-align: center;
+}
